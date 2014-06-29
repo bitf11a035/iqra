@@ -1,0 +1,19 @@
+﻿@model OnlineElectronicsShopping.Models.Admin
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+     <h2 style="margin-left: 30px;font-family: Calibri;color: black;font-size : 30px">Add Product:</h2>
+
+
+@using (Html.BeginForm("Delete_Prod", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+        <br><br><br><br><h1><b>Delete Products</b></h1><br>
+       <label  style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Id</label>
+       <input type="text" name="ID" id="ID" value=""/><br><br>
+      <button><input type="submit" value="Submit!" style="text-align: right;font-family:Calibri;font-size: 19px" /></button>  
+}
+</div>
+<br />

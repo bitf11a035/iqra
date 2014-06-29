@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model OnlineElectronicsShopping.Models.Product
+   <div>
+       <br><br><br><br><h2>Product Details</h2>
+      
+      <table width="500" border="0">
+     <tr>
+      <div class="product_img"><img src="~/images/@ViewBag.prod.Image" alt="" title="" border="0" /></div>
+   </tr>
+           <tr>
+      <div class="product_img">@Html.HiddenFor(m=>m.Image)</div>
+   </tr>
+          <tr>              
+    <th width="153" height="50" scope="row">
+      <h3>@Html.HiddenFor(m=>m.PId)</h3>
+</th>
+    <td  width="252" height="50" >@Html.HiddenFor(m=>m.PId)</td>
+    <td  width="81" height="50" >&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>@Html.LabelFor(m=>m.Name)</h3></th>
+    <td width="252" height="50" >@Html.DisplayFor(m=>m.Name)</td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+ 
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>@Html.LabelFor(m=>m.Amount)</h3></th>
+    <td width="252" height="50" >@Html.DisplayFor(m=>m.Amount)</td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+  <tr>
+    <th width="153" height="50" scope="row">      <h3>@Html.LabelFor(m=>m.Category)</h3></th>
+    <td width="252" height="50" >@Html.DisplayFor(m=>m.Category)</td>
+    <td width="81" height="50" >&nbsp;</td>
+  </tr>
+</table>
+    </div> 
+
+  

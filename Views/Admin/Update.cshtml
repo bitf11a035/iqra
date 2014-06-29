@@ -1,0 +1,38 @@
+﻿@model OnlineElectronicsShopping.Models.Product
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+ <div id="contents" style="float: right;width: 79%; height:500px;">
+                
+
+ 
+<div>
+     <h2 style="margin-left: 30px;font-family: Calibri;color: black;font-size : 30px">Edit Product</h2>
+
+  @using (Html.BeginForm("Update1","Admin",FormMethod.Post))
+  {
+      Html.ValidationSummary(true);
+      
+          <fieldset>
+             <legend></legend>
+              <div class="editor-label">
+              @Html.LabelFor(model=>model.PId)
+                  </div>
+              <div class="editor-field">
+                  @Html.TextBoxFor(model => model.PId, new { id = "PId" })
+                  </div>
+               <p>
+           <button> <input type="submit" value="Save" /></button>
+        </p>
+    </fieldset>
+             
+  }
+   
+
+    </div>
+             
+    
+</div>
+

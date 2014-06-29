@@ -1,0 +1,31 @@
+﻿@model OnlineElectronicsShopping.Models.Admin
+@{
+    ViewBag.Title = "ADD";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+     <h2 style="margin-left: 30px;font-family: Calibri;color: black;font-size : 30px">Add Product:</h2>
+
+
+@using (Html.BeginForm("Add1", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+              
+             <br><br><br><h1><b>Add Products</b></h1><br>
+           <label  style="text-align: right;font-family:Calibri;font-size: 19px">Enter ProductName</label><br/>
+           <input type="text" name="N1" id="N1" value=""/><br><br>
+           <label  style="text-align: right;font-family:Calibri;font-size: 19px">Enter Product Quantity</label><br />
+           <input type="text" name="Q1" id="Q1" value =""/><br><br>
+           <label  style="text-align: right;font-family:Calibri;font-size: 19px"> Enter Product Amount</label><br />
+           <input type="text" name="A1" id="A1" value =""/><br><br />
+          <label style="text-align: right;font-family:Calibri;font-size: 19px">Select Category</label><br />
+         <select id="category" name="category" style="height: 30px;width: 250px;margin-left: 20px"/>
+              <option  value="samsung">samsung</option>
+              <option  value="galaxy">galaxy</option>
+              <option  value="htc">htc</option><br><br><br><br><br><br>
+        <label style="text-align: right;font-family:Calibri;font-size: 19px">Upload Photo :</label><br />
+    <br /> <input type="file" name="file" style="height: 30px;width: 250px;margin-left: 20px" /><br />
+    <button> <input type="submit" value="Submit!" style="text-align: right;font-family:Calibri;font-size: 19px" /></button>  
+}
+</div>
+<br />

@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "HTC";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model OnlineElectronicsShopping.Models.Product
+   <div class="center_content">
+       
+         <h1>HTCS</h1> 
+     
+       @foreach (var product in ViewBag.product)
+       {
+           if (product.Name("htc2"))
+           {
+             <div class="prod_box">
+             <div class="top_prod_box"></div>
+              <div class="center_prod_box">            
+                 <div class="product_title"> @product.Name</div>
+                 <div class="product_img"><img src="~/images/@product.Image" alt="" title="" border="0" /></div>
+                
+                <div class="prod_price"><span class="reduce"></span> <span class="price"><h3>Price :</h3> @product.Amount</span></div>                        
+                 <div class="prod_quantity"><span class="reduce"></span><h3>Quantity :</h3> <span class="quantity">@product.Quatity</span></div>                        
+                 
+        </div>
+          
+            <div class="bottom_prod_box"></div>             
+            <div class="prod_details_tab">
+          @Html.ActionLink("Batck To Home", "index")
+        </div>
+   </div>
+       }
+       }
+</div>
+   
+   	   
+

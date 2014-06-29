@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Delete_prod";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete_prod</h2>
+ <div id="contents" style="float: right;width: 79%; height:500px;">
+                
+
+ 
+<div>
+     <h2 style="margin-left: 30px;font-family: Calibri;color: black;font-size : 30px">Delete Product</h2>
+
+  <form id="rgstrn" action="/Admin/Delte_Prod/@ViewBag.X.PId" method="post" style="height: auto;width:600px;border: 1px solid #BBBBBB;margin-left: 50px;margin-top: 30px">         
+        <table border="0" style="width:auto" style="margin-top: 50px;">
+            <tr style="height: 50px">
+                <td style="text-align: right;font-family:Calibri;font-size: 19px">Product ID:</td>
+                <td><input type="text" name="idd" id="idd" value="@ViewBag.X.PId" style="height: 30px;width: 250px;margin-left: 10px"/></td>
+                <td style="width: auto"><span style="font-family: Calibri; color: #218416; text-align: center"> <span class="field-validation-valid" data-valmsg-for="uname" data-valmsg-replace="true"></span></span> </td>
+            </tr>
+
+            <tr style="height: 50px">
+                <td style="text-align: right;font-family:Calibri;font-size: 19px">Product Name</td>
+                <td><input type="text" name="uname" id="uname" value="@ViewBag.X.Name"style="height: 30px;width: 250px;margin-left: 10px"/></td>
+                <td><span style="font-family: Calibri; color: #218416; text-align: center"><span class="field-validation-valid" data-valmsg-for="pass" data-valmsg-replace="true"></span></span> </td>
+
+                </tr>
+              <tr style="height: 50px">
+                <td style="text-align: right;font-family:Calibri;font-size: 19px">Product Price</td>
+                <td><input type="text" name="price" id="price" value="@ViewBag.X.Amount" style="height: 30px;width: 250px;margin-left: 10px"/></td>
+                <td><span style="font-family: Calibri; color: #218416; text-align: center"><span class="field-validation-valid" data-valmsg-for="pass" data-valmsg-replace="true"></span></span> </td>
+
+                </tr>
+              <tr style="height: 50px">
+                <td style="text-align: right;font-family:Calibri;font-size: 19px">Product Quantity</td>
+                <td><input type="text" name="quan" id="quan" value="@ViewBag.X.Quatity" style="height: 30px;width: 250px;margin-left: 10px"/></td>
+                <td><span style="font-family: Calibri; color: #218416; text-align: center"><span class="field-validation-valid" data-valmsg-for="pass" data-valmsg-replace="true"></span></span> </td>
+
+                </tr>
+            <tr style="height: 50px">
+                <td style="text-align: right;font-family:Calibri;font-size: 19px">Product Category</td>
+                <td><select name="category" ><option id="brac" value="@ViewBag.X.Category">Bracelets</option><option id="neck" value="@ViewBag.X.Category">Necklaces</option><option id="ring" value="@ViewBag.X.Category">Ring</option></select></td></tr>     <td><span style="font-family: Calibri; color: #218416; text-align: center"><span class="field-validation-valid" data-valmsg-for="pass" data-valmsg-replace="true"></span></span> </td>
+             <tr style="height: 50px">
+                <td style="text-align: right;font-family:Calibri;font-size: 19px">Image Of Product</td>
+                <td><input type="file" name="file" id="file" value="@ViewBag.X.Image" style="height: 20px;width: 200px;margin-left: 10px"/></td>
+                <td><span style="font-family: Calibri; color: #218416; text-align: center"><span class="field-validation-valid" data-valmsg-for="pass" data-valmsg-replace="true"></span></span> </td>
+
+                </tr>
+                
+   <tr style="height: 30px">
+                <td colspan="3"><button style="color:blue; margin-left:150px"><input type="submit" value="EditProduct" style="height: 30px;color:black;width: 100px;margin-left: 10px;font-size: 20px"/></button>
+              </td>
+        </tr> 
+            </table>
+</form>
+    
+</div>

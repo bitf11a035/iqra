@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model OnlineElectronicsShopping.Models.Product
+   <div class="center_content">
+       
+       @foreach (var product in ViewBag.product)
+       {
+            <div class="prod_box">
+        	<div class="top_prod_box" ></div>
+            <div class="center_prod_box">        
+                   
+                 <br><br><br><br><div class="product_title"> @product.Name</div><br>
+              
+                 <div class="product_img"><img src="~/Uploads/Images/@product.Image" alt="" title="" border="0" height="250" width="250" /></div>
+        </div>
+        </div>
+          
+            <div class="bottom_prod_box"></div>             
+            <div class="prod_details_tab">
+          
+            @Html.ActionLink("Details","details",new{id=product.PId}) 
+            @Html.ActionLink("Add To Cart", "Login","Account")
+        </div>
+       }
+     </div>
+

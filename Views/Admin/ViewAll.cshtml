@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "ViewAll";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>View All Products</h2>
+@foreach(var x in ViewBag.X)
+{
+        
+           <tr><td><img src="~/Uploads/images/@x.Image" alt="" width="25%" height="25%"/>   </td>
+            <td>
+                <table style="margin-right:400px">
+       
+            <tr> <td> <p>ID :</p></td>&nbsp <td>@x.PId</td></tr> 
+                <tr><td><p> Name :</p></td>&nbsp<td>@x.Name</td></tr>
+               <tr><td><p> Price :</p></td>&nbsp<td>@x.Amount</td></tr>
+               <tr><td><p> Quantity :</p></td>&nbsp<td>@x.Quatity</td></tr>
+   </table>
+    </td>
+    </tr>
+      
+}
+   
+
